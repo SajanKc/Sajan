@@ -1,0 +1,271 @@
+/*leftside nav css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+/*home image transprent caption*/
+.home {
+  padding-top: 30px;
+  position: relative;
+  /*max-width: 800px;  Maximum width */
+  /*margin: 0 auto;*/ /* Center it */
+} 
+
+.home .content {
+  position: absolute; /* Position the background text */
+  bottom: 0px; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+  text-align: center;
+}
+
+
+.column{
+    background: black /*#4b4276*/;
+    border-right: 2px dashed red;
+}
+
+.leftside{
+  width: auto;
+  height: 100%;
+  padding: 20px 0px;
+  position: fixed;
+  
+}
+
+
+.leftside ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.leftside ul li a{
+  color: white !important;
+  display: block;
+  text-decoration: none;
+}
+
+.leftside ul li a .fas{
+  width: 35px;
+  color: white;
+}
+
+.leftside ul li:hover{
+  background-color: #594f8d;
+  text-decoration-line: none;
+  background-color: gray;
+  border-left: 2px solid #ffdd22;
+  border-bottom: 2px solid #ffdd22;
+}
+
+.leftside ul li a:hover{
+  color: white;
+}
+
+.leftside .social_media{
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.leftside .social_media a{
+  display: block;
+  width: 40px;
+  background: gray;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.leftside .social_media a i{
+  color: white;
+}
+
+.leftside .social_media .facebook:hover{
+  background-color:#4267b2 !important;
+  border: 2px solid gray;
+}
+
+.leftside .social_media .linkedin:hover{
+  background-color: #283e4a !important;
+  border: 2px solid gray;
+}
+
+.leftside .social_media .instagram:hover{
+  background-color: #833AB4 !important;
+  border: 2px solid gray;
+}
+
+
+.rightside{
+  background-color: black;
+  color: white;
+}
+
+.card{
+  border: 2px solid black !important;
+}
+
+.rightside .card-body{
+  color: black;
+  background-color: #8d8d8d !important;
+  
+}
+
+.btn-primary {
+  background-color: black !important;
+  border:none !important;
+}
+
+.btn-primary:hover {
+  border-left: 2px solid yellow !important;
+  border-bottom: 2px solid yellow !important;
+}
+
+@media (max-height: 500px){
+  .leftside{
+    display: none;
+  }
+}
+
+/*main img */
+@media (max-height: 500px){
+  .home img{
+   width: 300px;
+   height: auto; 
+  }
+}
+
+@media (max-width: 576px){
+  .home img{
+   width: auto;
+   height: 300px; 
+  }
+  .home h3{
+    font-size: 14px;
+  }
+}
+
+ 
+.about_short_contact_wrap ul li span label{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+ 
+.about_short_contact_wrap ul li span a{
+  color: black !important;
+}
+
+.about_short_contact_wrap ul li span{
+  font-size: 20px;
+  color:black;
+}
+
+.progress div{
+  background-color: green;
+}
+#home1 img{
+  border: 3px solid yellow;
+}
+
+
+#skills .row{
+  margin: 0 !important;
+}
+
+
+.box{
+  border-left: 3px solid yellow;
+  border-right: 3px solid yellow;
+  background-color: skyblue;
+}
+.about{
+  background-color: skyblue;
+  border-right: 3px solid yellow;
+}
+.about h2{
+  padding-top: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+#achievement{
+  background-color: lightgreen;
+}
+
+#Gallery{
+  background-color: #f8f9fa;
+}
+
+#Gallery div h2{
+  color: black;
+}
+
+#footer{
+ border: 3px solid white;  
+}
+
+div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+#myImg{
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.paragraph{
+  text-align: justify;
+  font-size: 24px;
+  color: black;
+}
+
+.btn-info{
+  margin-bottom: 15px;
+}
+#achievement div h2{
+  color: black;
+}
+
+#address{
+  color: black;
+}
+
+button.bulbon{
+  margin-right: 15px;
+  padding: 0 10px;
+}
+
+button.bulbon:hover{
+  background-color: orange;
+  border: 2px solid orange;
+}
+
+button.bulboff{
+  padding: 0 5px;
+  margin-left: 10px; 
+}
+
+button.bulboff:hover{
+  background-color: black;
+  color: white;
+  border: 1px solid gray;
+}

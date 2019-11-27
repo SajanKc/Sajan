@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="./Img/favicon.ico" type="image/ico">
+	<title>Sajan Kc</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script>
+		function myFunction() {
+		  var x = document.getElementById("myDIV");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+	</script>
+	<script type="text/javascript">
+		var sound1 = new Audio();
+		sound1.src = "./mp3/mp1.mp3";
+
+		var sound2 = new Audio();
+		sound2.src = "./mp3/mp2.mp3";
+
+		var sound3 = new Audio();
+		sound3.src = "./mp3/onoff.mp3";
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">	
+	    	<div class="col-lg-2 column">
+	    		<div class="leftside">
+	    			<img src="./Img/logo.png" class="mx-auto d-block mb-3" width="110" height="auto" >
+		        	<!--<h2>Sajan Kc</h2>-->
+		        	<ul>
+			            <li><a href="#home1" onmousedown="sound1.play()"><i class="fas fa-home"></i>Home</a></li>			            
+			            <li><a href="#aboutme" onmousedown="sound2.play()"><i class="fas fa-address-card"></i>About</a></li>
+			            <li><a href="#skills" onmousedown="sound1.play()"><i class="fas fa-map-pin"></i>Skills</a></li>
+			            <li><a href="#achievement" onmousedown="sound2.play()"><i class="fas fa-project-diagram"></i>Achievements</a></li>       
+			            <li><a href="#Gallery" onmousedown="sound1.play()"><i class="fas fa-user"></i>Gallery</a></li>
+			            <li><a href="ProgrammingLanguage.html"><i class="fas fa-blog"></i>Blogs</a></li>
+			            <li><a href="#Contact" onmousedown="sound2.play()"><i class="fas fa-address-book"></i>Contact</a></li>		            
+		        	</ul> 
+			        <div class="social_media">
+			          <a onmousedown="sound2.play()" class="facebook" href="https://www.facebook.com/saajan.kecy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+			          <a onmousedown="sound2.play()" class="linkedin" href="https://www.linkedin.com/in/sajan-kc-17a76911b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+			          <a onmousedown="sound2.play()" class="instagram" href="https://www.instagram.com/sazankecy/" target="_blank"><i class="fab fa-instagram"></i></a>
+			      	</div>
+			     </div> 	
+	     	</div> <!--left side ended-->
+
+
+	 <!--right side started-->
+		    <div class="col-lg-10 col-md-12 col-12 rightside">
+		    	<div class="home" id="home1">
+		    		<img src="./Img/MyPhoto1.png" class="img-fluid" alt="Responsive image" style="max-width: 100%; height: auto;">
+		    		<div class="content">
+					    <h3>Don’t stop when you’re tired. Stop when you’re done.</h3>
+					    
+					</div>
+		    	</div>
+		    	<section class="my-5" id="aboutme">
+					<div>
+						<h2 class="text-center">About Me</h2>
+					</div>
+				 	<br>
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12 box">
+								<img src="Img/pp1.png" width="auto" height="75" class="img-fluid aboutimg">					
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 about">
+								<h2>Hello there,</h2>
+								<p class="py-3 paragraph">I am <strong>Sajan Kc</Strong> and I am pursuing BCA from Aadim National College. I am an intermediate coder and have experience in coding in different programming languages. Also, I am interested in coding and exploring new ideas. My hobbies are reading, playing video games, coding, watching movies and traveling. I have a deep interest in computer programming.</p>
+								<a onmousedown="sound1.play()" onclick="myFunction()" class="btn btn-info" id="address">Read more...</a>
+								<div id="myDIV" style="display:none;">
+									<div class="about_short_contact_wrap">
+										<br>
+										<ul>
+											<li>
+												<span><label>City:</label> Kathmandu, Nepal</span>
+											</li>
+											<li>
+												<span><label>Interests:</label> Coding, Reading and Traveling</span>
+											</li>
+											<li>
+												<span><label>Website:</label><a href="www.kcsajan.com.np" target="_blank" style="color: white;"> www.kcsajan.com.np </a></span>
+											</li>
+											<li>
+												<span><label>Mail:</label> sazankce@gmail.com</span>
+											</li>
+											<li>
+												<span><label>Phone:</label> +977 98433377779</span>
+											</li>							
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!--skills-->
+				<section class="mt-5" id="skills">
+					<h2 class="text-center"> My Skills </h2>
+					<div class="row">
+						<div class="col-lg-6 mt-5">							
+							<img class="mx-auto d-block" id="myImage" src="./Img/bulb/offBulb.jpg" width="300">
+							<br>
+							<button class="bulbon" onmousedown="sound3.play()" onclick="document.getElementById('myImage').src='./Img/bulb/onBulb.png'">ON</button>
+							<button class="bulboff" onmousedown="sound3.play()" onclick="document.getElementById('myImage').src='./Img/bulb/offBulb.jpg'">OFF</button>
+						</div>											
+							
+
+						<div class="card card-body col-lg-6 text-right mt-5">						
+
+							<h4> HTML5 </h4>
+							<div class="progress mb-3">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"> 85% </div>
+							</div>
+
+							<h4> CSS </h4>
+							<div class="progress mb-3">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%"> 60% </div>
+							</div>
+
+							<h4> C LANGUAGE </h4>
+							<div class="progress mb-3">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%"> 80% </div>
+							</div>
+
+							<h4> JAVA </h4>
+							<div class="progress mb-3">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%"> 30% </div>
+							</div>
+
+							<h4> PYTHON 3 </h4>
+							<div class="progress mb-3">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 20%"> 20% </div>
+							</div>
+
+							<h4> Ruby </h4>
+							<div class="progress mb-3">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%"> 10% </div>
+							</div>							
+						</div>
+					</div><!--row ended-->
+				</section>
+
+				<!--achievement-->
+				<section class="mt-5" id="achievement">
+					<div>
+						<h2 class="text-center">My Achievements</h2>
+					</div>
+
+					<div class="mt-5 container-fluid">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-12 mb-2">
+								<div class="card mt-4">
+				 					<img class="card-img-top" src="Img/achivement/html5.jpg" alt="html5 certificate">
+				  					<div class="card-body">
+				    					<h4 class="card-title">HTML5</h4>
+				    					<p class="card-text">Issued on 15 November, 2019</p>
+				    					<a href="https://www.sololearn.com/Certificate/1014-846485/pdf/?mode=download" class="btn btn-primary" target="_blank">Link</a>
+				  					</div>
+								</div>
+							</div>							
+
+							<div class="col-lg-4 col-md-4 col-12 mb-2">
+								<div class="card mt-4">
+				 					<img class="card-img-top" src="Img/achivement/python3.jpg" alt="Card image">
+				  					<div class="card-body">
+				    					<h4 class="card-title">Python 3</h4>
+				    					<p class="card-text">Issued on 11 June, 2017</p>
+				    					<a href="https://www.sololearn.com/Certificate/1073-846485/pdf/" class="btn btn-primary" target="_blank">Link</a>
+				  					</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-12 mb-2">
+								<div class="card mt-4">
+				 					<img class="card-img-top" src="Img/achivement/rubyonrails.jpg" alt="Certificate of Ruby on rails">
+				  					<div class="card-body">
+				    					<h4 class="card-title">Ruby</h4>
+				    					<p class="card-text">Issued on 09 June, 2017</p>
+				    					<a href="https://www.sololearn.com/Certificate/1081-846485/pdf/?mode=download" class="btn btn-primary" target="_blank">Link</a>
+				  					</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-12 mb-2">
+								<div class="card mt-4">
+				 					<img class="card-img-top" src="Img/achivement/golden.jpg" alt="typing certificate">
+				  					<div class="card-body">
+				    					<h4 class="card-title">77WPM</h4>
+				    					<p class="card-text">Issued on 25 May, 2019</p>
+				    					<a href="https://www.ratatype.com/u1842572/certificate/" class="btn btn-primary" target="_blank">Link</a>
+				  					</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<!--Gallery-->
+				    <section class="mt-5" id="Gallery">
+				    	<div>
+				    		<h2 class="text-center">Gallery</h2>
+				    	</div>
+
+				    	<div class=" mt-5 container-fluid gallery">
+				    		<div class="row">
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g1.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g2.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g3.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g4.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g5.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g6.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g7.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g8.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g9.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g10.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g11.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g12.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g13.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g14.jpg" class="img-fluid">
+				    			</div>
+
+				    			<div class="col-lg-4 col-md-4 col-12 polaroid">
+				    				<img id="myImg" src="Img/gallery/g15.png" class="img-fluid">
+				    			</div>
+				    		</div>				    		
+				    	</div>
+				    </section>
+
+				    <!--Programming Language-->
+				    <section class="my-5" id="ProgrammingLanguage">
+				    	<div class="py-5 text-center">
+				    		<h2>Blogs</h2>
+				    		<button type="button" class="btn btn-warning"><a href="ProgrammingLanguage.html">Load More...</a></button>
+				    	</div>				    	
+				    </section> <!--Programming Language edned-->
+
+				    <div id="update">
+				      <h1>Update Available Soon. . .</h1>
+				    </div>
+				    <hr>
+				    <br>
+				<!--header ended-->
+
+				<!--Footer-->
+				<section id="footer">
+					<div class="row mb-3" id="Contact">
+						<div class="col-lg-6 col-md-6 col-sm-12"> <!--Contact me-->
+			  				<form class="form">
+			  					<h1>CONTACT ME</h1>
+			  					<div class="form-group">
+			  						<label for="usr">FULL NAME</label>
+			  						<input type="text" class="form-control" id="usr">
+								</div>
+			  					<hr>
+			  					<div class="form-group">
+			      					<label for="email">EMAIL</label>
+			      					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+			    				</div>
+			  					<hr>
+			  					<div class="form-group">
+			 						<label for="comment">MESSAGE</label>
+			  						<textarea class="form-control" rows="5" id="comment"></textarea>
+								</div>
+			  					<hr>
+			  					<button type="submit" class="btn btn-warning">SEND A MESSAGE</button>
+			  				</form>
+		  				</div><!--Contact me closed-->
+
+						<!--space available-->
+					</div>
+				</section>
+			</div> <!--right columns ended-->
+		</div> <!--row ended-->
+	</div>
+</body>
+</html>
