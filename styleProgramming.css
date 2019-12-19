@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*list-style: none;*/
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+p{
+	font-size: 18px;
+	text-align: justify;
+}
+
+.Definition ul li{
+	text-align: justify;
+	font-size: 18px;
+}
+
+b, strong{
+	font-size: 22px !important;
+}
