@@ -12,9 +12,14 @@ p{
 	text-align: justify;
 }
 
-.Definition ul li{
+.unit1 ul li{
 	text-align: justify;
 	font-size: 18px;
+}
+
+.unit1 ol li{
+  text-align: justify;
+  font-size: 18px;
 }
 
 b, strong{
