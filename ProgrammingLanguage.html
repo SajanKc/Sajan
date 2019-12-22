@@ -43,9 +43,15 @@
           <li class="nav-item active">
            <a class="nav-link" href="ProgrammingLanguage.html">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-           <a class="nav-link" href="#java">JAVA</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">JAVA</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#unitOne">UNIT 1</a>
+              <a class="dropdown-item" href="#unitTwo">UNIT 2</a>
+              <a class="dropdown-item" href="#unitThree">UNIT 3</a>
+            </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link disabled" href="#C-Programming">C-Programming</a>
           </li>
@@ -55,10 +61,11 @@
   </div>
 
 <div class="container pt-4">
-    <div id="java" class="javaText" style="">
-      <h1>OOP in JAVA </h1>
-      <h3>On the Basis of Tribhuvan University BCA 3rd Semester Syllabus</h3>
-      <hr>
+    <h1>OOP in JAVA </h1>
+    <h3 id="unitOne">On the Basis of Tribhuvan University BCA 3rd Semester Syllabus</h3>
+    <hr>
+    <!--unit 1 started-->
+    <div>
       <h2>Unit-1 Introduction to JAVA</h2>
       <div class="unit1">
         <h3>1) Definition:</h3>
@@ -91,7 +98,7 @@
             <ul type="circle">
               <li>No explicite pointer</li>
               <li>Java programs run inside a virtual machine sandbox</li>
-              <li>Class loader: <p>Class loader in Java is a part of the Java Runtime Environment(JRE). Which is used to load classes into the Java Virtual Machine dynamically.</p></li>
+              <li>Class loader: <p>Class loader in Java is a part of the <a href="#JRE">Java Runtime Environment(JRE)</a>. Which is used to load classes into the Java <a href="#JVM" title="It is an emulation of a computer system">Virtual Machine</a> dynamically.</p></li>
               <li>It adds security by separating the package for the classes of the local file system from those that are imported from network sources.</li>
               <li>Bytecode Verifider:<p>It checks the code fragments for illegal code that can violate access right to objects.</p></li>
               <li>Security Manager:<p>It determines what resources a class can access such as reading and writing to the local disk.</p></li>
@@ -144,7 +151,8 @@
       <br>
       <div class="unit1">
         <h3>3) The Internet and JAVA's Place in IT</h3>
-        <p>Java is strongly associated with the internet because of the first applicatoin program written in Java was <a href="https://en.wikipedia.org/wiki/HotJava" title="It was a modular, extensible web browser to run applets on the internet." target="_blank">HotJava</a>.<br> Internet users can use Java to create applet programs & run them locally using a Java-enabled browser(HotJava).<br>Java applets have made the internet a true extension of the storage system os the local computer. <br><img src="./Img/JavaImg/javawww.png"></p>
+        <p>Java is strongly associated with the internet because of the first applicatoin program written in Java was <a href="https://en.wikipedia.org/wiki/HotJava" title="It was a modular, extensible web browser to run applets on the internet." target="_blank">HotJava</a>.<br> Internet users can use Java to create applet programs & run them locally using a Java-enabled browser(HotJava).<br>Java applets have made the internet a true extension of the storage system os the local computer.</p>
+        <img src="./Img/JavaImg/javawww.png" width="100%">
         <ol type="1">
           <li>Java communicates with a web page through a special tag.</li>
           <li>Java user sends a request for an HTML document to the remote computer net browser.</li>
@@ -157,21 +165,210 @@
       <div class="unit1">
         <h3>4) Applications and Applets</h3>
         <h4>i) Application</h4>
-        <p>Application is stand-alonge Java program that runs with the support of a virtual machine in a client or server side. Also referred to as an application program, a Java application is designed to perform specifi function to run on any Java compatible <a href="https://en.wikipedia.org/wiki/Virtual_machine" title="It is an emulation of a computer system" target="_blank">Virtual Machine</a> regardless of the computer architecture. An application is either executed for the user or for some other application program. Examples of Java application includes database programs, development tools, word processors, text and image editing programs, spreadsheets, web browswers etx.</p>
+        <p>Application is stand-alonge Java program that runs with the support of a virtual machine in a client or server side. Also referred to as an application program, a Java application is designed to perform specifi function to run on any Java compatible virtual machine regardless of the computer architecture. An application is either executed for the user or for some other application program. Examples of Java application includes database programs, development tools, word processors, text and image editing programs, spreadsheets, web browswers etx.</p>
         <h4>Applets</h4>
         <p>Unlike a Java application, an applet is specifically designed to be executed with in an HTML web document using and external <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application Programming Interface" target="_blank">API</a>. They are basically small programs more like the web version of an application that require a Java plugin to run on client browser. They run on the client side and are generally used for internet computing. We can execute a Java applet in HTML page exactly as we would include an image in a web page. when we see a HTML page with an applet in a Java-enabled web browser, the applet code gets transferred to the system and is finally run by the Java-enabled virtual machine on the browser.</p>
+        <br>
+        <h3>Differences Between application and applets in Java.</h3>
+        <table class="differencesTable" border="1" cellpadding="0" cellspacing="0" width="100%">
+          <thead align="center">
+            <tr>
+              <th>Application</th>
+              <th>Applet</th>
+            </tr>            
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. A standalone program that is designed to run on a stanalone machine to accomplish a task.</td>
+              <td>1. A small application that performs one specific task that runs within the scope.</td>
+            </tr>
+            <tr>
+              <td>2. It is a large program.</td>
+              <td>2. It is a small program.</td>
+            </tr>
+            <tr>
+              <td>3. Created by writing the program inside the main method.</td>
+              <td>3. Created by extending the java.applet.Applet.</td>
+            </tr>
+            <tr>
+              <td>4. Can perform file reading and writing on the local computer.</td>
+              <td>4. Cannot read and write files on the local computer.</td>
+            </tr>
+            <tr>
+              <td>5. Can be executed using Java Runtime Environment(JRE).</td>
+              <td>5. Executed by any Java compatible web browswer.</td>
+            </tr>
+            <tr>
+              <td>6. Started from main() method.</td>
+              <td>6. Started/ Initialized through init() method.</td>
+            </tr>
+            <tr>
+              <td>7. Can access data and resources available on the system without any security restrictions.</td>
+              <td>7. Executed in a more restricted environment with more security restrictions. They can only access the browswer specific services.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
+      <br>
+      <div class="unit1" id="JVM">
+        <h3>5) Java Virtual Machine (JVM)</h3>
+        <p>JVM is an abstract machine. It is called a virtual machine because it doesn't physically exist. It is a specification that provides a runtime environment in which Java bytecode can be executed. It can also run those program which are written in other languages and compiled to Java bytecode.</p>
+        <p>JVM are available for many hardware and software platforms. JVM, JRE and JDK are platform dependent because the configuration of each operating system is different from each other. However, Java is platform independent.</p>
+        <h4>There are three notations of JVM</h4>
+        <ol type="i">
+          <li>Specification:<br>Where working of JVM is specified.</li>
+          <li>An Implementation:<br>Its implemenatation is known as JRE.</li>
+          <li>Runtime Instance:<br>whenever we write java command on the command prompt to run the Java class, an instance of JVM is created.</li>
+        </ol>
+        <h4>The JVM performs the following main tasks.</h4>
+        <ul type="circle">
+          <li>Verifies Code,</li>
+          <li>Executes Code,</li>
+          <li>Provies Runtime Environment.</li>
+        </ul>
+      </div>
+      <br>
+      <div class="unit1" id="JRE">
+        <h3>6) Java Runtime Environment (JRE)</h3>
+        <p>It is a set of software tools which are used for developing Java applications. It is used to provide the runtime environments. It is the implementation of JVM. It physically exist. It contains a set of libraries + other files that JVM uses at runtime.</p>
+        <img src="./Img/JavaImg/jre.png" width="100%">
+      </div>
+      <br>
+      <div class="unit1" id="JDK">
+        <h3>7) Java Development Kit (JDK)</h3>
+        <p>The JDK is a software develoment environment which is used to develop applications and applets. It physically exists. It cantains JRE + development tools.</p>
+        <p>JDK is an implementation of any one of the below given Java platforms released by Oracle Corporation</p>
+        <ul type="circle">
+          <li>Standard Edition Java Platform</li>
+          <li>Enterprise Edition Java Platform</li>
+          <li>Micro Edition Java Platform</li>
+        </ul>
+        <img src="./Img/JavaImg/jdk.png" width="100%">
+      </div>
+      <br>
+      <div class="unit1">
+        <h3>8) Byte Code not an Executable Code</h3>
+        <p>Java bytecode is the instruction set for the JVM. As soon as Java program is compiled, Java bytecode is generated. In more apt terms, Java bytecode is the machine code in the form of a .class file.</p>
+        <p>With the help of Java bytecode we achieve platform independence in Java.</p>
+        <img src="./Img/JavaImg/javabytecode.png" width="100%">
+      </div>
+      <br>
+      <div class="unit1">
+        <h3>9) Procedural-Oriented Vs Object-Oriented Programminig</h3>
+        <table class="differencesTable" border="1" cellpadding="0" cellspacing="0" width="100%">
+          <thead align="center">
+            <tr>
+              <th>Procedural-Oriented</th>
+              <th>Object-Oriented</th>
+            </tr>            
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Program is divided into small parts called functions.</td>
+              <td>1. Program is divided into small parts called Objects.</td>
+            </tr>
+            <tr>
+              <td>2. It follows top down approach.</td>
+              <td>2. It follows bottom up approach.</td>
+            </tr>
+            <tr>
+              <td>3. There is no access specifier in procedural programming.</td>
+              <td>3. They have access specifiers like private, public, protected, default.</td>
+            </tr>
+            <tr>
+              <td>4. Adding new data and function is not easy.</td>
+              <td>4. Adding new data and function is easy.</td>
+            </tr>
+            <tr>
+              <td>5. They does not have any proper way for hiding data so it is less secure.</td>
+              <td>5. They provides data hiding so it is more secure.</td>
+            </tr>
+            <tr>
+              <td>6. Overloading is not possible.</td>
+              <td>6. Overloading is possible.</td>
+            </tr>
+            <tr>
+              <td>7. Function is more important that data.</td>
+              <td>7. Data is more important than function.</td>
+            </tr>
+            <tr>
+              <td>8. Procedural programming is based on unreal world.</td>
+              <td>8. Object oriented programming is based on real world.</td>
+            </tr>
+            <tr>
+              <td>9. Example: C, FORTAN, PASCAL, BASIC etc.</td>
+              <td>9. Example: C++, JAVA, PYTHON, C# etc.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <div class="unit1">
+        <h3>10) Compiling and Running a Simple Program</h3>
+        <p>Compiling and running a java program is very easy after JDK installation. Following are the steps:</p>
+        <ol type="1">
+          <li>Open a command prompt window and goto the directory where you saved the Java program.</li>
+          <li>Type 'javac FileName.java' and press enter to compile your code. If there are no errors in your code, the command prompt will take you to the next line ( Assumption: The path variable is set).</li>
+          <li>Now, type 'java filename' to run your program.</li>
+          <li>We will be able to see the result printed on the window.</li>
+        </ol>
+      </div>
+      <br>
+      <div class="unit1">
+        <h3>Setting up your computer for Java Environment</h3>
+        <p>Assuming we have installed Java in C:\Program Files\Java\jdk\bin</p>
+        <ul type="circle">
+          <li>Right click on 'This pc' and select 'properties'.</li>
+          <li>Click the 'Environment Variables' button under the 'Advanced' tab.</li>
+          <li>Now, alter the 'path' variable so that it also contains the path to the Java executable. Example, if the path is currently set to 'C:\WINDOWS\SYSTEM32' then change your path to read 'C:\WINDOWS\SYSTEM32;C:\Program Files\java\jdk\bin'</li>
+        </ul>
+      </div>
+      <br>
+      <div class="unit1">
+        <h3>11) Writing a Program</h3>
+        <p>public class HelloWorld{<br>
+          &emsp; public static void main(String[] args){<br>
+          &emsp;&emsp;System.out.println("Hello World!");<br>
+        &emsp;}<br>
+        }</p>
 
-  <!-- <div id="C-Programming" class="" style="height:100vh;">
-    <h1>What is C programming</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div> -->
+        <ul type="circle">
+          <li><strong>class: </strong>keyword is used to declare a class in java.</li>
+          <li><strong>public: </strong>keyword is an access modifier which represents visibility. It means it is visible to all.</li>
+          <li><strong>static: </strong>there is no need to create an object to invoke the static method.</li>
+          <li><strong>void: </strong>is the return type of the method. Which doesn't return any thing.</li>
+          <li><strong>main: </strong>represents the starting point of the program.</li>
+          <li><strong>String[] args: </strong>is used for command like argument.</li>
+          <li><strong>System.out.println(): </strong>is used to print statement.</li>
+        </ul>
+      </div>
+      <br>
+      <div class="unit1">
+        <h3>12) Interpreting and Running the Program</h3>
+        <p>Once your program successfully compiles into Java bytecodes you can interpret and run applications on any Java Virtual Machine. Interpreting and running a java program means invoking the java Virtual Machine bytecode interpreter, which converts the Java bytecodes to platform-dependent machine codes so your computer can understand and run the program.</p>
+        <p>The Java interpreter is invoked at the command like on DOS shell operating systems as follows: <br>java ExampleProgram</p>
+      </div>
+      <br>
+    </div><!--unit 1 ended-->
+
+    <!--Unit 2 started-->
+    <div id="unitTwo">
+      <h2>Unit 2 Tokens, Expressions and Control Structure</h2>
+      <div class="unit2">
+        <h3>1) Data Types in JAVA</h3>
+        <p>Update available soon</p>
+      </div>
+    </div> <!--Unit 2 ended-->
+
+     <!--Unit 3 started-->
+    <div id="unitThree">
+      <h2>Unit 3 Object Oriented Programming Concepts</h2>
+      <div class="unit3">
+        <h3>1) JAVA OOPs Concepts</h3>
+        <p>Update available soon</p>
+      </div>
+    </div> <!--Unit 3 ended-->
+  
 </div>
 
 

@@ -12,16 +12,34 @@ p{
 	text-align: justify;
 }
 
-.unit1 ul li{
+.unit1 ul li, ol li, .unit1 p{
 	text-align: justify;
 	font-size: 18px;
 }
 
-.unit1 ol li{
-  text-align: justify;
-  font-size: 18px;
+.unit1 ol li, .unit1 ul li{
+  margin-left: 20px;
 }
 
 b, strong{
 	font-size: 22px !important;
+}
+
+.differencesTable{
+  font-size: 18px;
+}
+
+.differencesTable tbody tr td{
+  padding: 8px;
+}
+
+@media only screen and (max-width: 500px){
+.unit1 img{
+  width: 100%;
+  }
+}
+@media only screen and (min-width: 500px){
+.unit1 img{
+  width: 60%;
+  }
 }
