@@ -21,6 +21,7 @@ p{
   margin-left: 20px;
 }
 
+
 b, strong{
 	font-size: 22px !important;
 }
@@ -32,6 +33,15 @@ b, strong{
 .differencesTable tbody tr td{
   padding: 8px;
 }
+
+.dataTypeTable tr{
+  text-align: center;
+}
+
+.identifier ol li{
+  margin-left: 20px;
+}
+
 
 @media only screen and (max-width: 500px){
 .unit1 img{

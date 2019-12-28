@@ -356,9 +356,102 @@
       <h2>Unit 2 Tokens, Expressions and Control Structure</h2>
       <div class="unit2">
         <h3>1) Data Types in JAVA</h3>
-        <p>Update available soon</p>
+        <p>Data types are the collection of values and set of operations on those values. It specify the different sizes and values that can be stored in the variable. <br>There are two types of data types in Java.</p>
+        <img src="">
+        <table class="dataTypeTable" border="1" cellpadding="0" cellspacing="0" width="100%"><!--data type table started-->
+          <tr>
+            <th>Data Type</th>
+            <th>Default Value</th>
+            <th>Default Size</th>
+          </tr>
+          <tr>
+            <td>boolean</td>
+            <td>false</td>
+            <td>1 bit</td>
+          </tr>
+          <tr>
+            <td>char</td>
+            <td>'\u0000'</td>
+            <td>2byte</td>
+          </tr>
+          <tr>
+            <td>byte</td>
+            <td>0</td>
+            <td>1 byte</td>
+          </tr>
+          <tr>
+            <td>short</td>
+            <td>0</td>
+            <td>2 byte</td>
+          </tr>
+          <tr>
+            <td>int</td>
+            <td>0</td>
+            <td>4 byte</td>
+          </tr>
+          <tr>
+            <td>long</td>
+            <td>0l</td>
+            <td>8 byte</td>
+          </tr>
+          <tr>
+            <td>float</td>
+            <td>0.0f</td>
+            <td>4 byte</td>
+          </tr>
+          <tr>
+            <td>double</td>
+            <td>0.0d</td>
+            <td>8 byte</td>
+          </tr>
+        </table> <!--data type table ended-->
+       <h3>#Why char uses 2 byte in Java and what is '\0000'?</h3> 
+       <p>ans: It is because it uses unicode system not ASCII code system. <br>The \u0000 is the lowest range of unicode system.</p>
+       <h3>2) User define data type.</h3>
+       <p>They are those that programmer himself defines. For example classes, interfaces.</p>
+       <br>
+       <h3>3) Constant in Java.</h3>
+       <p>A constant is a variable whose value cannot change once it has been assigned. Java doesn't have built-in support for constants. <br><br> &emsp; A constant can make our program more easily read and understood by others. In addition, a constant is cached by JVM as well as our application. So using a constant can imporove performance. <br><br>To define a variable as a constant, we just need to add the keyword "final" in front of the variable declaration.</p>
+       <br>
+       <strong>For Example:</strong><br><p>final float pi = 3.14f;</p>
+       <h3>4) Identifiers</h3>
+       <p>&emsp;In programming languages, identifiers are used for identification purpose. In Java, an identifier can be a class name, method name, variable or a label. For example:</p>
+       <code>
+        public class Test{ <br>
+          &emsp;public static void main(String[] args){ <br>
+          &emsp;&emsp;int a = 40; <br>
+      &emsp;&emsp;} <br>
+        }
+      </code>
+      <div class="notes">
+        <p><strong>Test: </strong>Class name</p>
+        <p><strong>main: </strong>Method name</p>
+        <p><strong>String: </strong>Predefined class name</p>
+        <p><strong>args: </strong>Variable name</p>
+        <p><strong>a: </strong>Variable name</p>
+      </div>
+      <h3>#Rules for defining Java Identifiers:</h3>
+      <div class="identifier">
+        <p>&emsp;There are certain rules for defining a valid Java identifier. These ruels must be followed, otherwise we get compile-time error.
+          <ol type="1">
+            <li>The only allowed characters for identifiers are all alphanumeric characters( A-Z, a-z, 0-9), '$', '_'</li>
+            <li>Identifers should not start with digits(0-9)</li>
+            <li>Java identifiers are case-sensitive.</li>
+            <li>There is no limit on the length of the identifers but it is advisable to use and optimum length of 4-15 leters only.</li>
+            <li>Reserve words can't be used as an identifiers.</li>
+          </ol>
+        </p>
+      </div>
+      <h3>#Reserved Words (53)</h3>
+      <p>Any programming language reserves some words to represent funtionalities defined by that language. These words are called reserve words.
+        <br>They can be briefly categorised into two parts.
+        <p>i) keyword(50) <br>ii) literals(3)</p>
+      </p>
+
       </div>
     </div> <!--Unit 2 ended-->
+    <hr>
+    <hr>
 
      <!--Unit 3 started-->
     <div id="unitThree">
