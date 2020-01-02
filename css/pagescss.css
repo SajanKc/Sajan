@@ -1,5 +1,13 @@
 .mainContent{
-	margin: 70px 10px 0 10px;
-	
+	margin: 70px 10px 0 10px;	
+	text-align: justify;
+}
+body{
+	background-color: #d1cf7d;
 }
 
+code{
+	color: brown;
+	font-weight: bold;
+	font-size: 16px;
+}
