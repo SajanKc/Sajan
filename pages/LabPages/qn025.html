@@ -47,27 +47,38 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN025. Write a program to print the average of array elements.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the average of array elements.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program we use for each loop to access all array elements and calcuate the average of them by adding and dividing by the total number of element.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      public class Qn025{ <br>
+        public static void main(String[] args){<br>
+          int sum = 0;<br>
+          int[] arrayVar = {2,3,5,8,9};<br>
+          for(int a: arrayVar)<br>
+          {<br>
+            sum += a;<br>
+          }<br>
+          float average = sum / 4;<br>
+          System.out.println("Average of array elements is: " + average);<br>
+        }<br>
+      }<br>
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Average of array element is: 5.4
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that we can achieve the average value of array list. .length is used to calcuate the length of array. We change the type of length to float to achieve the fractional part also.
     </p>
   </div>
   </body>

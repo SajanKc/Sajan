@@ -47,27 +47,45 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN013. Write a program to print prime numbers between 1 to 100.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the prime numbers between 1 to 100.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      To achieve the result we use for loop to generate numbers between 1 to 100. For the calculation of prime number we use modulo(%) operator inside the if statement.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      public class Qn013{  <br>
+        public static void main(String[] args){<br>
+          int number;<br>
+          for(number=1; number<=100; number++) <br>
+          {<br>
+            int count=0;<br>
+            for(int i=2; i<=number/2; i++)<br>
+            {<br>
+              if(number%i==0)<br>
+              {<br>
+                count++;<br>
+                break;<br>
+              }<br>
+            }<br>
+            if(count == 0 && number != 1)<br>
+              System.out.print(number + "\t");<br>
+          } <br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can get prime numbers between 1 to 100 by using for loop and some conditions.
     </p>
   </div>
   </body>

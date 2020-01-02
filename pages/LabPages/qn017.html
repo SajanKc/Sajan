@@ -47,27 +47,37 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN017. Write a program to print sum of odd numbers between 1 to 100.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the sum of odd numbers between 1 to 100.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program, we use for loop to generate numbers between 1 to 100. Initialize sum variable as 0 at the beginning to store sum of all odd numbers and print the result and also use if statement to get the odd numbers.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      public class Qn017{ <br>
+        public static void main(String[] args){<br>
+          int sum = 0;<br>
+          for(int i=1;i<=100;i++)<br>
+          {<br>
+            if(i%2!=0)<br>
+              sum+=i;<br>
+          }<br>
+          System.out.println("Sum of odd number between 1 to 100 is " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Sum of odd number between 1 to 100 is 2500
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can calculate sum of odd numbers between 1 to 100 using this program.
     </p>
   </div>
   </body>

@@ -47,27 +47,54 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN022. Write a program to print sum of prime numbers between n1 to n2.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the sum of prime number between two given numbers
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program, we ask for the user to input two numbers. We use Scanner clas to store the given numbers. For loop to generate list of numbers and some if statements to check for the prime or not.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      import java.util.Scanner; <br>
+      public class Qn022{    <br>
+        public static void main(String[] args){<br>
+          int number,sum=0;<br>
+          Scanner input = new Scanner(System.in);<br>
+          System.out.print("Enter first number: ");<br>
+          int n1 = input.nextInt();<br>
+          System.out.print("Enter second number: ");<br>
+          int n2 = input.nextInt();<br>
+            for(number=n1; number<=n2; number++)<br>
+            {<br>
+              int count=0;<br>
+              for(int i=2; i<=number/2; i++)<br>
+              {<br>
+                if(number%i==0)<br>
+                {<br>
+                  count++;<br>
+                  break;<br>
+                }<br>
+              }<br>
+              if(count == 0 && number != 1)<br>
+                sum+=number;<br>
+            }    <br>
+            System.out.print("Sum of prime number between " + n1+ " to " + n2 + " is " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Enter first number: 100 <br>
+      Enter second number: 250 <br>
+      Sum of prime numbers between 100 to 250 is 4770
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can calculate sum of prime numbers between any two any given numbers using this program.
     </p>
   </div>
   </body>

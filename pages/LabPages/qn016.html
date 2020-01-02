@@ -47,27 +47,44 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN016. Write a program to print sum of n1 to n2.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the sum of numbers from two given numbers by the user.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program, we ask for the user to input two numbers to generate list of numbers and use Scanner class to store the given input. Initialize sum variable as 0 at the beginning to store the sum of all numbers and print the result.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      import java.util.Scanner; <br>
+      public class Qn016{<br>
+        public static void main(String[] args){<br>
+          int sum = 0;<br>
+          Scanner input = new Scanner(System.in);<br>
+          System.out.print("Enter first number: ");<br>
+          int n1 = input.nextInt();<br>
+          System.out.print("Enter second number: ");<br>
+          int n2 = input.nextInt();<br>
+          for(int i=n1;i<=n2;i++)<br>
+          {<br>
+            sum+=i;<br>
+          }<br>
+          System.out.println("Sum of " + n1 + " to " +  n2 + " is " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Enter first nubers: 500 <br>
+      Enter second number: 600 <br>
+      Sum of 500 to 600 is 55550
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+     In this way, I would like to conclude that, we can ask any two numbers from user and calculate the sum from first number to second number. 
     </p>
   </div>
   </body>

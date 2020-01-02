@@ -47,27 +47,54 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN023. Write a program to declare, assign and accessing integer array.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To declare, assign and accessing integer array.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      An array is a container that holds data (values) of one single type. For example, we can create an array that can hold 1000 values of int type. <br>
+      <b>How to declare an array?</b> <br>
+      Syntax: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;dataType[] arrayName; <br>
+      where, <br>
+      -> dataType can be primitive or an object. <br>
+      -> arrayName is an identifier. <br>
+      <b>How many elements can array hold?</b> <br>
+      -> To allocate memory for array elements. <br>
+      Syntax: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;dataType[] variableName = new dataType[SIZE]; <br>
+      If we assign SIZE = 10. Meaning, this array can hold 10 elements of specified dataType. <br>
+      <b>How to initialize arrays in Java?</b> <br>
+      ->In Java, we can initialize arrays during declaration or later in the program(runtime).<br>
+      For example, <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;int[] age={10,13,15,23}; <br>
+      <b>How to access array elements?</b> <br>
+      -> We can easily access and alter array elements by using its numeric index. <br>
+      For eg: age[2] //It gives 15 from the list.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      public class Qn023{ <br>
+        public static void main(String[] args){<br>
+          int newArray[] = new int[3];//declaring array of size 3<br>
+          newArray[0] = 10;//assigning the value to array index.<br>
+          newArray[1] = 24;<br>
+          newArray[2] = 36;<br>
+          //accessing the array element<br>
+          System.out.println(newArray[1]);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      24
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can declare any number of(size) array using new keyword or without using it. We can access any value of any location using the idex number. Note that Java array index starts from 0.
     </p>
   </div>
   </body>

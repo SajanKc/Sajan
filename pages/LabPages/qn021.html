@@ -47,27 +47,46 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN021. Write a program to print sum of prime numbers between 1 to 100.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print sum of prime numbers between 1 to 100.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      A number that is divisible only by itself and 1 is prime number. To generate numbers between 1 to 100 we use for loop and some if condition to check wheater the number is prime or not.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      public class Qn021{ <br>
+        public static void main(String[] args){<br>
+          int number,sum=0;<br>
+            for(number=1; number<=100; number++)<br>
+            {<br>
+              int count=0;<br>
+              for(int i=2; i<=number/2; i++)<br>
+              {<br>
+                if(number%i==0)<br>
+                {<br>
+                  count++;<br>
+                  break;<br>
+                }<br>
+              }<br>
+              if(count == 0 && number != 1)<br>
+                sum+=number;<br>
+            } <br>
+            System.out.print("Sum of prime number between 1 to 100 is " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Sum of prime number between 1 to 100 is 1060
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can calculate the sum of prime numbers between 1 to 100 using this program.      
     </p>
   </div>
   </body>

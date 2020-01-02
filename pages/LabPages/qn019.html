@@ -47,27 +47,37 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN019. Write a program to  print sum of even number between 1 to 100.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the sum of even number between 1 to 100.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program, we use for loop to generate numbers between 1 to 100. We know that, if any number divided by 2 gives remainder 0 (zero) than this number is even number. So, we use if statement to get the even number and sum variable to store the result and print.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      public class Qn019{ <br>
+        public static void main(String[] args){<br>
+          int sum = 0;<br>
+          for(int i=1;i<=100;i++)<br>
+          {<br>
+            if(i%2==0)<br>
+              sum+=i;<br>
+          }<br>
+          System.out.println("Sum of even number between 1 to 100 is " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Sum of even number between 1 to 100 is 2550 
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can calcualte the sum of even numbers between 1 to 100 using this program.
     </p>
   </div>
   </body>

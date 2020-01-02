@@ -47,27 +47,41 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN024. Write a program to print the sum of array elements.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the sum of all array elements.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program we use for each loop to access the value of array. The for each loop is used to traverse array or collection in Java. It is easier to use than simple for loop because we don't need to increment value and subscript notation. It works on element basis not index. It returns element one by one in the defined variable. <br>
+      Syntax: for each loop <br>
+      for(dataType variable : arrayName){ <br>
+      //code to be executed <br>
+      }
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      public class Qn024{ <br>
+        public static void main(String[] args){<br>
+          int sum = 0;<br>
+          int[] arrayVar = {2,3,5,8};<br>
+          for(int a: arrayVar)<br>
+          {<br>
+            sum += a;<br>
+          }<br>
+          System.out.println("Sum of array elements is: " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Sum of array elements is: 18
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that we can calculate the sum of all array elements using for each loop.
     </p>
   </div>
   </body>

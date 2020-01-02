@@ -47,27 +47,45 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN018. Write a program to print sum of odd numbers between n1 to n2.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the sum of odd numbers between two given numbers.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program, we ask for the user to input two numbers to generate numbers between those numbers and Scanner class to store the given input for loop to generate numbers and if statement to get the odd numbers.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      import java.util.Scanner; <br>
+      public class Qn018{<br>
+        public static void main(String[] args){<br>
+          int sum = 0;<br>
+          Scanner input = new Scanner(System.in);<br>
+          System.out.print("Enter first number: ");<br>
+          int n1 = input.nextInt();<br>
+          System.out.print("Enter second number: ");<br>
+          int n2 = input.nextInt();<br>
+          for(int i=n1;i<=n2;i++)<br>
+          {<br>
+            if(i%2!=0)<br>
+              sum+=i;<br>
+          }<br>
+          System.out.println("Sum of odd number between " + n1 + " to " + n2 + " is " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Enter first number: 35 <br>
+      Enter second number: 55 <br>
+      Sum of odd number between 35 to 55 is 495
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can calculate the sum of odd numbers between any two given numbers using this program.
     </p>
   </div>
   </body>

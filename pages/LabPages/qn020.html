@@ -47,27 +47,45 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN020. Write a program to print sum of even number between n1 to n2.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print the sum of even numbers between any two given numbers.
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program, we ask for the input from the user. To store the given number we use Scanner class. For loop to generate list of number between those numbers. If statement to generate even numbers.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      import java.util.Scanner; <br>
+      public class Qn020{<br>
+        public static void main(String[] args){<br>
+          int sum = 0;<br>
+          Scanner input = new Scanner(System.in);<br>
+          System.out.print("Enter first number: ");<br>
+          int n1 = input.nextInt();<br>
+          System.out.print("Enter second number: ");<br>
+          int n2 = input.nextInt();<br>
+          for(int i=n1;i<=n2;i++)<br>
+          {<br>
+            if(i%2==0)<br>
+              sum+=i;<br>
+          }<br>
+          System.out.println("Sum of even number between " + n1 + " to " + n2 + " is " + sum);<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Enter first number: 55 <br>
+      Enter second number: 75 <br>
+      Sum of even numbers between 55 to 75 is 650
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can calculate the sum of even numbers between any two given number using this program.
     </p>
   </div>
   </body>

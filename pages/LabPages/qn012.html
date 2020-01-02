@@ -47,27 +47,43 @@
     </nav>
   </div>
   <div class="mainContent">
-    <h4>QN00.</h4>
+    <h4>QN012. Write a programt o print even numbers between n1 to n2.</h4>
     <hr>
     <h5>1. Objective</h5>
     <p>
-      To
+      To print even numbers between first number(n1) to second number(n2).
     </p>  
     <h5>2. Theory</h5>
     <p>
-      
+      In this program, we ask for the input from the user to generate a list of numbers. For this we use Java Scanner class to store input data and for loop to generate numbers. If statement with some condition is applied to get the even numbers only.
     </p>
     <h5>3. Source Code</h5>
     <code>
-      sajank kckladlfkajd laj dflajdlfj
+      import java.util.Scanner; <br>
+      public class Qn012{<br>
+        public static void main(String[] args){<br>
+          Scanner input = new Scanner(System.in);<br>
+          System.out.print("Enter first number: ");<br>
+          int n1 = input.nextInt();<br>
+          System.out.print("Enter second number: ");<br>
+          int n2 = input.nextInt();<br>
+          for(int i=n1;i<=n2;i++)<br>
+          {<br>
+            if(i%2==0)<br>
+              System.out.print(i + "\t");<br>
+          }<br>
+        }<br>
+      }
     </code>
     <h5>4. Output</h5>
     <p>
-      
+      Enter first number: 15 <br>
+      Enter second number: 35 <br>
+      16 18 20 22 24 26 28 30 32 34
     </p>
     <h5>5. Conclusion</h5>
     <p>
-      
+      In this way, I would like to conclude that, we can get even numbers from n1 to n2 according to the users input.
     </p>
   </div>
   </body>
