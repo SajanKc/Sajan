@@ -6,6 +6,9 @@
   text-decoration: none;
   font-family: 'Playfair Display', serif;
 }
+body{
+  background-color: #d1cf7d;
+}
 
 p{
 	font-size: 18px;
@@ -40,6 +43,11 @@ b, strong{
 
 .identifier ol li{
   margin-left: 20px;
+}
+
+a:hover{
+  color: white;
+  text-decoration: none;
 }
 
 
