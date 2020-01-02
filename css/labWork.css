@@ -1,0 +1,28 @@
+body{
+	background-color: gray;
+}
+.mainMenu{
+	margin: 60px 10px 0 10px;
+}
+
+.mainMenu{
+	text-align: justify;
+	color: black;
+	font-size: 16px;
+}
+
+.mainMenu ol li a{
+	text-align: center;
+	color: black;
+	font-size: 16px;
+}
+
+.mainMenu ol li{
+	font-weight: bold;
+}
+
+.mainMenu ol li a:hover{
+	color: white;
+	font-size: 17px;
+	text-decoration: none;
+}

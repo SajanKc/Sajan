@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN002. Write a program which accept and print all basic data types of Java.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To see the use of all basic data types of Java.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+      Data types specify the different sizes and values that can be stored in the variable. There are two types of data types in Java.
+      <ol type="i">
+        <li>Primitive Data Types</li>
+        <li>Non-Primitive Data Types</li>
+      </ol>
+      <br>
+      In this program we only look after primitive data types. Primitive data types are the building blocks of data manipulation. There are 8 types of primitive data types in Java.
+      <table border="1" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <th>Data Type</th>
+          <th>Default Value</th>
+          <th>Default Size</th>
+        </tr>
+        <tr>
+          <td>boolean</td>
+          <td>false</td>
+          <td>1 bit</td>
+        </tr>
+          <td>byte</td>
+          <td>0</td>
+          <td>1 byte</td>
+        </tr>
+        </tr>
+          <td>char</td>
+          <td>'\u0000'</td>
+          <td>2 byte</td>
+        </tr>
+        </tr>
+          <td>short</td>
+          <td>0</td>
+          <td>2 byte</td>
+        </tr>
+        </tr>
+          <td>int</td>
+          <td>0</td>
+          <td>4 byte</td>
+        </tr>
+        </tr>
+          <td>long</td>
+          <td>0l</td>
+          <td>8 byte</td>
+        </tr>
+        </tr>
+          <td>float</td>
+          <td>0.0f</td>
+          <td>4 byte</td>
+        </tr>
+        </tr>
+          <td>double</td>
+          <td>0.0d</td>
+          <td>8 byte</td>
+        </tr>
+      </table>
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      public class Qn002{ <br>
+        public static void main(String[] args){<br>
+          //boolean <br>
+          boolean b = true;<br>
+          System.out.println("boolean: " + b);<br>
+          <br>
+          //byte<br>
+          byte a = 127;<br> 
+        <br>
+              // byte is 8 bit value <br>
+              System.out.println("byte: " + a); <br>
+          <br>
+          //char<br>
+          char ch = 'S';<br>
+          System.out.println("char: " + ch);<br>
+          <br>
+          //Short<br>
+          short sh = 306;<br>
+          System.out.println("short: " + sh);<br>
+          <br>
+          //int<br> 
+          int num = 999;<br>
+          System.out.println("int: " + num);<br>
+          <br>
+          //long<br>
+          long lon = 25362814;<br>
+          System.out.println("long: " + lon);<br>
+          <br>
+          //float<br>
+          float fl = 4.1416197f;<br>
+          System.out.println("float: " + fl);<br>
+          <br>
+          //double<br>
+          double value= 25.264897456;<br>
+          System.out.println("double: " + value);<br>
+        }<br>
+      }
+    </code>
+    <h5>4. Output</h5>
+    <p>
+      boolean: ture<br>
+      byte: 127<br>
+      char: S<br>
+      short: 306<br>
+      int: 999<br>
+      long: 25362814<br>
+      float: 4.141697<br>
+      double: 25.264897456
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+      In this way, I would like to conclude that we can use any of primite data types according to the type of data we want to store. For example, if we have to store integer number 50 byte would be the best choice for this. Because byte can hold integer value from -128 to 127.
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

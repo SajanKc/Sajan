@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN004. Write a program which demonstrate the use of if statements.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To test the different conditions using if statements.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+      If statement is the most simple decision making statement. It is used to decide weheater a certain statement or block of statements will be executed or not. i.e. if a certain condition is true then a block of statement is executed otherwise not. It checks boolean condition: true or false. There are various types of if statement in Java.
+      <ol type="i">
+        <li><a href="#code1">If Statement</a></li>
+        <li><a href="#code2">If Else Statement</a></li>
+        <li><a href="#code3">Ladder If Statement</a></li>
+        <li><a href="#code4">Nested If Statement</a></li>
+      </ol>
+    </p>
+    <h5>3. Source Code</h5>
+    <h5>a. if statement </h5>
+    <code id="code1">      
+      public class Qn004A{ <br>
+        public static void main(String[] args){<br>
+          boolean name = true;<br>
+          if(name != false)<br>
+            System.out.println("Hello Sajan");<br>
+        }<br>
+      }
+    </code>
+    <br><br>
+    <h5>4. Output QN004A</h5>
+    <p>
+      Hello Sajan
+    </p>
+    <hr>
+    <h5>b. if else statement </h5>
+    <code id="code2">      
+      public class Qn004B{<br>
+        public static void main(String[] args){<br>
+          boolean name = true;<br>
+          if(name == false)<br>
+            System.out.println("Hello Sajan");<br>
+          else<br>
+            System.out.println("Hello World");<br>
+        }<br>
+      }
+    </code>
+    <br><br>
+    <h5>4. Output QN004B</h5>
+    <p>
+      Hello World
+    </p>
+    <hr>
+    <h5>d. Ladder if statement</h5>
+    <code id="code3">
+      public class Qn004C{<br>
+        public static void main(String[] args){<br>
+          int choice = 4;<br>
+          if(choice == 1)<br>
+            System.out.println("Sunday");<br>
+          else if(choice == 2)<br>
+            System.out.println("Monday");<br>
+          else if(choice == 3)<br>
+            System.out.println("Tuesday");<br>
+          else if(choice == 4)<br>
+            System.out.println("Wednesday");<br>
+          else if(choice == 5)<br>
+            System.out.println("Thursday");<br>
+          else if(choice == 6)<br>
+            System.out.println("Friday");<br>
+          else if(choice == 7)<br>
+            System.out.println("Saturday");<br>
+          else<br>
+            System.out.println("Invalid input");<br>
+        }<br>
+      } <br>
+    </code> 
+    <br><br>
+    <h5>4. Output QN004C</h5>
+    <p>
+      Wednesday
+    </p>  
+    <hr>  
+    <h5>b. Nested if statement</h5>  
+    <code id="code4">
+      public class Qn004D{<br>
+        public static void main(String[] args){<br>
+          int num = -5;<br>
+          if(num > 0)<br>
+          {<br>
+            if(num % 2 == 0)<br>
+              System.out.println(num + " is positive even number");<br>
+            else<br>
+              System.out.println(num + " is positive odd number");<br>
+          }<br>
+          else<br>
+          {<br>
+            if(num % 2 == 0)<br>
+              System.out.println(num + " is negative even number");<br>
+            else<br>
+              System.out.println(num + " is negative odd number");<br>
+          }<br>
+        } <br>
+      } 
+    </code>
+    <br> <br>
+    <h5>4. Output QN004D</h5>
+    <p>
+      -5 is negative odd number
+    </p>
+    <hr>
+    <h5>5. Conclusion</h5>
+    <p>
+      In this way, I would like to conclude that, we can use different types of if statement according to the requirement and complexity of the problem.
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>
