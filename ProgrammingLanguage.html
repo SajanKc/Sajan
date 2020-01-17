@@ -55,7 +55,7 @@
   </div>
 
 <div class="container pt-4">
-    <h1>OOP in JAVA </h1>
+    <h1>OOP in JAVA</h1>
     <h3 id="unitOne">On the Basis of Tribhuvan University BCA 3rd Semester Syllabus</h3>
     <hr>
     <!--unit 1 started-->
@@ -351,7 +351,7 @@
       <div class="unit2">
         <h3>1) Data Types in JAVA</h3>
         <p>Data types are the collection of values and set of operations on those values. It specify the different sizes and values that can be stored in the variable. <br>There are two types of data types in Java.</p>
-        <img src="">
+        <img src="" alt="image here data type">
         <table class="dataTypeTable" border="1" cellpadding="0" cellspacing="0" width="100%"><!--data type table started-->
           <tr>
             <th>Data Type</th>
@@ -439,9 +439,534 @@
       <h3>#Reserved Words (53)</h3>
       <p>Any programming language reserves some words to represent funtionalities defined by that language. These words are called reserve words.
         <br>They can be briefly categorised into two parts.
-        <p>i) keyword(50) <br>ii) literals(3)</p>
+        <p>i) keywords(50) <br>ii) literals(3)</p>
+      </p>
+      <p>#keywords define functionalities and literals defines a value.</p>
+
+      <table class="keywordTable" border="1" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td>abstract</td>
+          <td>assert</td>
+          <td>boolean</td>
+          <td>break</td>
+          <td>byte</td>
+          <td>case</td>
+        </tr>
+        <tr>
+          <td>catch</td>
+          <td>char</td>
+          <td>class</td>
+          <td>const</td>
+          <td>continue</td>
+          <td>default</td>
+        </tr>
+        <tr>
+          <td>double</td>
+          <td>do</td>
+          <td>else</td>
+          <td>enum</td>
+          <td>extends</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>final</td>
+          <td>finally</td>
+          <td>float</td>
+          <td>for</td>
+          <td>goto</td>
+          <td>if</td>
+        </tr>
+        <tr>
+          <td>implements</td>
+          <td>import</td>
+          <td>instanceof</td>
+          <td>int</td>
+          <td>interface</td>
+          <td>long</td>
+        </tr>
+        <tr>
+          <td>native</td>
+          <td>new</td>
+          <td>null</td>
+          <td>package</td>
+          <td>private</td>
+          <td>protected</td>
+        </tr>
+        <tr>
+          <td>public</td>
+          <td>return</td>
+          <td>short</td>
+          <td>static</td>
+          <td>strictfp</td>
+          <td>super</td>
+        </tr>
+        <tr>
+          <td>switch</td>
+          <td>synchronized</td>
+          <td>this</td>
+          <td>throw</td>
+          <td>throws</td>
+          <td>transient</td>
+        </tr>
+        <tr>
+          <td>true</td>
+          <td>try</td>
+          <td>void</td>
+          <td>volatile</td>
+          <td>while</td>
+          <td></td>
+        </tr>
+      </table> <br>
+      <!--Keywords table closed-->
+      <h3>5) Literals:</h3>
+      <p>A literals is a source code representation of a fixed value. They are represented directly in the code without any computation.<br>Literals can be assigned to any primitive type variable. <br>
+        Eg: int num = 10; <br>
+        Where, int = Data Type <br>
+              10 = Literal
+      </p>
+      <h3>6) Type Conversion and Casting: </h3>
+      <p>Converting one primitive data type into another is known as type casting (Type conversion) in Java. We can cast the primitive data types in two ways namely, widening and narrowing. </p>
+      <h4>i) Widening:</h4>
+      <p>Converting a lower data type to a higher data type is known as widening. In this case the casting/conversion is done automatically therefore, it is known as implicit type casting. In this type both data types should be compatible with each other. <br>
+          byte – short-int-long-float-double <br>
+          Example: <br>
+          public class wideningExample{<br>
+            public static void main(String[] args){<br>
+          char ch = 'c';<br>
+          int i = ch;<br>
+          System.out.println(i);<br>
+          }<br>
+          }<br><br>
+
+          Output:<br>
+          67//Integer value of the given character.
+        </p>
+        <h4>ii) Narrowing:</h4>
+        <p>Converting higher data type to a lower data type is known as narrowing. In this case the casting/ conversion is not done automatically. We need to convert explicitly using the cast operator "( ) " explicitly. Therefore, it is known as explicit type casting. In this case both data types need to be compatible with each other. <br>
+            double-float-long-int-short-byte <br>
+            Example:<br>
+            Import java.util.Scanner;<br>
+            public class NarrowingExample{<br>
+              public static void main(String[] args){<br>
+                Scanner sc = new Scanner(System.in);<br>
+                System.out.println("Enter an integer value: ");<br>
+                int i = sc.nextInt();<br>
+                char ch = (char)i;<br>
+            System.out.println("Character value of the given integer: " + ch);<br>
+            }<br>
+            }<br><br>
+
+            Output:<br>
+            Enter an integer value: <br>
+            67<br>
+            Character value of the given integer: C<br><br>
+
+            <h3>7) Variables: Variable Definition and Assignment</h3>
+            <p>A variable is a container which holds the value while the java program is executed. A variable is assigned with a datatype. Variable is a name of memory location.
+            Variable is name of reserved area allocated in memory. It is a combination of "Vary" + "able" that means its value can be changed. </p>
+
+            <p># There are three types of variables in Java.</p>
+            <h4>1) Local Variable:</h4>
+            <p>A variable declared inside the body of the method is called local variable. We can use this variable only within the method and the other methods in the class aren't even aware that the variable exits. <br>
+            • A local variable can't be defined with "static" keyword. <br>
+            • A variable declared as parameter is also a local variable. <br>
+
+            <h4>2) Instance Variable</h4>
+            <p>A variable declared inside the class but outside the body of the methods, is called instance variable. It is not declared as static. It is called instance variable because its value is instance specific and is not shared among instances.</p>
+          
+            <h4>3) Static Variable:</h4>
+            <p>A variable which is declared as static is called static variable. It cannot be local. We can create a single copy of the class. Memory allocation for static variable happens only once when the class is loaded in the memory.</p>
+            Example: <br>
+            public class var{<br>
+              int data = 20; //instance variable<br>
+              static int v = 50; // static variable<br>
+              public static void main(String[] args){<br>
+              int n = 99;//local variable<br>
+            }<br>
+            }<br><br>
+      <h3>8) Java command line arguments:</h3>
+      <p>The java command line argument is an argument i.e passed at the time of running the java program. The arguments passed from the console can be received in the java program and it can be used as an input. So, it provides a convenient way to check the behavior of the program for the different values. We can pass N(1,2,3 and so on) numbers of arguments from the command prompt. </p>
+      <p>Example <br>
+      1) In this example, we are receiving only one argument and printing it. To run this java program, we must pass at least one argument from the command prompt. <br>
+      public class CommandlineExample{ <br>
+       public static void main(String[] args){<br>
+          System.out.println("Your first argument is: " + args[0]);<br>
+          }<br>
+        }<br>
+      Compile by> javac CommandlineExample.java <br>
+      Run by> java CommandlineExample Sajan <br><br>
+
+      Output: <br>
+      Your first argument is: Sajan </p>
+
+      <h3>9) Java Comments </h3>
+        <p>The Java comments are statements that are not executed by the compiler and interpreter. The comments can be used to provide information or explanation about the variable, method, class or any statement. It can also be used to hide program code for specific time. </p>
+      <h4>Types of Java Comments:</h4>
+      <h6><b>1) Single Line Comment</b></h6>
+        <p>The single line comment is used to comment on line. <br>
+      Syntax: <br>
+      //This is single line comment.</p>
+      <h6><b>2) Multi Line Comment</b></h6>
+        <p>The multiline comment is used to comment multiple line of code. <br>
+      Syntax: <br>
+        /* This is <br>
+        Multiline <br>
+        Comment */ </p>
+      <h6><b>3) Documentation Comment </b></h6>
+        <p>The documentation comment is used to create documentation API. To create documentation API, we need to use javadoc tool. <br>
+      Syntax: <br>
+        /** This is <br>
+        Documentation <br>
+        Comment */ </p>
+      <h3>10) Using Operators:</h3>
+        <p>Operators are special symbols (characters) that carry out operations on operands (variables and values). For example, '+' is an operator that performs addition.
+      <h5>#Types of Java Operators </h5></p>
+      <h6><b>1) Assignment Operator</b></h6>
+       <p>It is used in Java to assign values to variables. For example <br>
+        Int age = 23; <br>
+      The assignment operator assigns the value on its right to the variable on its left. Here 23 is assigned to the variable age using = operator. </p>
+
+      <h3><b>2) Arithmetic Operators:</b></h3>
+        <p>They are used to perform mathematical operations like addition, subtraction, multiplication etc. </p>
+        <table class="arithmeticTable" border="1" cellpadding="0" cellspacing="0" width="60%">
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>+</td>
+            <td>Addition(Also used for string concatination)</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>Division</td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Remainder</td>
+          </tr>          
+        </table>
+
+     <h3><b>3) Relational Operators</b></h3> 
+        <p>The relational operators determines the relationship between two operands. It checks if and operand is greater than, less than, equals to, not equals to and so on. Depending upon the relationship, it results to either 'true' or 'false'. </p>
+        <table class="arithmeticTable" border="1" cellpadding="0" cellspacing="0" width="60%">
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>==</td>
+            <td>equal to</td>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>not equal to</td>
+          </tr>
+          <tr>
+            <td>></td>
+            <td>greater than</td>
+          </tr>
+          <tr>
+            <td><</td>
+            <td>less than</td>
+          </tr>
+          <tr>
+            <td>>=</td>
+            <td>greater than or equal to</td>
+          </tr>
+          <tr>
+            <td><=</td>
+            <td>less than or equal to</td>
+          </tr>
+        </table>
+     <p>They are used in decision making and loops. </p>
+
+     <h3><b>4) Logical Operators</b></h3> 
+        <p>The logical operators || (conditional OR) and && (condition AND) operates on Boolean expressions and ! (conditional-NOT) inverse the result. </p>
+        <table class="arithmeticTable" border="1" cellpadding="0" cellspacing="0" width="60%">
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>&&</td>
+            <td>If both operands are true than only "logical AND operator" evaluate true.</td>
+          </tr>
+          <tr>
+            <td>||</td>
+            <td>If one of the operands or both true it evaluate true.</td>
+          </tr>
+          <tr>
+            <td>!</td>
+            <td>It is a unary operator. It reverse the value of operands.</td>
+          </tr>
+        </table>
+
+     <h3><b>5) Bitwise Operators</b></h3> 
+        <p>These operators are used to perform manipulation of individual bits of a number. They can be used with any of the integer types.</p>
+        <table class="arithmeticTable" border="1" cellpadding="0" cellspacing="0" width="60%">
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Work</th>
+          </tr>
+          <tr>
+            <td>&</td>
+            <td>Bitwise AND</td>
+            <td>Returns bit by bit AND of input values</td>
+          </tr>
+          <tr>
+            <td>|</td>
+            <td>Bitwise OR</td>
+            <td>Returns bit by bit OR of input values.</td>
+          </tr>
+          <tr>
+            <td>^</td>
+            <td>Bitwise XOR</td>
+            <td>Returns bit by bit XOR of input values.</td>
+          </tr>
+          <tr>
+            <td>~</td>
+            <td>Bitwise Complement</td>
+            <td>Returns the one's compliment representation of input value.</td>
+          </tr>
+        </table>
+
+     <h3><b>6) Shift Operators</b></h3> 
+        <p>These operators are used to shift the bits of a number left or right thereby multiplying or dividing the number by two respectively. They can be used when we have to multiply or divide a number by two. General format <br>
+      Number shift-op number_of_places_to_shift; </p>
+
+      <table class="arithmeticTable" border="1" cellpadding="0" cellspacing="0" width="60%">
+          <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Work</th>
+          </tr>
+          <tr>
+            <td><<</td>
+            <td>Left Shift</td>
+            <td>Shifts the bits of the number to the left and fill 0 on voids left as a result.</td>
+          </tr>
+          <tr>
+            <td>>></td>
+            <td>Signed Right Shift</td>
+            <td>Shifts the bits of the number to the right and fills 0 on voids left as a result.</td>
+          </tr>
+          <tr>
+            <td>>>></td>
+            <td>Unsigned Right Shift</td>
+            <td>Shifts the bits of the number to the right and fills 0 on voids left as a result.</td>
+          </tr>
+        </table>
+     <h3><b>7) Instance of Operator</b></h3> 
+       <p>It is used for type checking. It can be used to test if an object is an instance of a class, a subclass or an interface. General format: <br>
+      Object instanceof class/subclass/interface; <br>
+      <b>For Example:</b> <br>
+      public class InstanceOperator{ <br>
+        public static void main(String[] args){ <br>
+          person obj1= new person(); <br>
+      System.out.println("Obj1 instance of person: " + (obj1 instanceof person)); <br>
+      } <br>
+      } <br>
+      class person{ <br>
+      }<br>
+        <br>
+      Output: <br>
+      Obj1 instance of person: true </p>
+
+    <h3><b>8) Ternary Operator</b></h3>  
+        <p>It is a shorthand version of if-else statement. It has three operands and hence the name ternary. <br>
+      <b>Syntax:</b> <br>
+        Condition? if true: if false; </p>
+     <h3><b>9) Increment/Decrement Operator</b></h3>
+        <p>In programming, increment ++ operator increases the value of a variable by 1 and decrement – operator decreases the value of a variable by 1. <br>
+      ++ and – operator as prefix and postfix <br>
+      • Suppose we use ++ operator as prefix like ++var; <br>
+      The value of var is incremented by 1 then, it returns the value. <br>
+      • Suppose we use ++ operator as postfix like var++; <br>
+      The original value of var is returned first then, var is incremented by 1. </p>
+
+    <h3>  11) Control Statement: (if, switch) </h3>
+       <p>Control statement/ Decision making statements which decides what to execute and when. They are similar to decision making in real time. </p>
+      <h4> <b>i) if statement</b> </h4>
+      <p>There are 4 decision making statement in Java.</p>
+
+      <h4>1) Simple if statement </h4>
+        <p>It is the basic of decision making statements in Java. It executes certain amount of code if the condition is true. <br>
+      <b>Syntax:</b><br>
+      if(condition) <br>
+      { <br>
+      //codes here <br>
+      } <br>
       </p>
 
+      <h4>2) if-else statement </h4>
+        <p>In if-else statement, if condition is true then statements in if block will be executed but if it is comes out as false then else block will be executed. <br>
+      <b>Syntax:</b> <br>
+        if(condition) <br>
+      { <br>
+      //if condition true <br>
+      } <br>
+      else <br>
+      { <br>
+      //if condition false <br>
+        } <br>
+      </p>
+
+     <h4>3) Nested if statement: </h4>
+        <p>Nested if statements is if inside and if block. It is same as normal if-else statement but they are written inside another if-else statement.
+      <b>Syntax:</b> <br>
+        if(condition1)<br>
+      {<br>
+      //true statement1<br>
+        if(condition2)<br>
+        {<br>
+        //true statement2<br>
+      }<br>
+      else<br>
+      {<br>
+      //condition2 false statement<br>
+      }<br>
+      }<br>
+      else<br>
+      {<br>
+      //condition 1 false statement<br>
+      } </p>
+
+     <h4>4) Else if Ladder statement </h4>
+        <p>It will be used when we need to compare value with more than 2 conditions. They are executed from top to bottom approach. As soon as the code finds the matching condition, that block will be executed. But if no condition is matching then the last else statement will be executed.<br>
+      Syntax:<br>
+      if(condition1){<br>
+        Statement1;<br>
+      }<br>
+      else if(condition2){<br>
+        Statement2;<br>
+      }<br>
+      else if(condition3){<br>
+        Statement3;<br>
+      }<br>
+      else if(condition N){<br>
+        Statement N;<br>
+      }<br>
+      else{<br>
+      //No matching condition.<br>
+      }</p>
+
+     <h4><b>ii) Switch statement</b></h4>
+       <p>Java switch statement compares the value and executes on of the case blocks based on the condition. It is same as else if ladders. Below are some points to consider while working with switch statements. <br>
+      • Case value must be of the same type as expression used in switch statement. <br>
+      • Case value must be a constant or literal. It doesn't allow variables. <br>
+      • Case value should be unique. If it is duplicate then program will give compile time error. <br>
+      <b>Syntax:</b> <br>
+      switch(caseValue) <br>
+      { <br>
+        Case 1: <br>
+          Statement1; <br>
+          break;<br>
+      Case 2:<br>
+          Statement2;<br>
+          break;<br>
+      Case 3:<br>
+          Statement3;<br>
+          break;<br>
+      default:<br>
+      //statement out of case value<br>
+      }</p>
+
+      <h3>12) Looping Statement</h3>
+        <p>Looping statements are the statements which executes a block of code repeatedly until some condition meet to the criteria. Loops can be considered as repeating If statement. There are three types of loops available in Java. </p>
+     <h4><b>i) While</b></h4> 
+        <p>While loops are simplest kind of loop. It checks and evaluates the condition and if it is true then executes the body of the loop. This is repeated until the condition becomes false. Condition in while loop must be given as a Boolean expression. If int or string is used instead, compiler will give the error. <br>
+      <b>Syntax: </b> <br>
+      while(condition){ <br>
+        statement1; <br>
+      }</p>
+
+      <h4><b>ii) Do…while </b></h4>
+        <p>It works same as while loop. It has only one difference that in do-while loop, condition is checked after the execution of the loop body. That is why this loop is considered as exit control loop. In do-while loop, body of the loop will be executed at least once before checking the condition. <br>
+      <b>Syntax: </b> <br>
+      do{ <br>
+        statement1; <br>
+      }while(condition); </p>
+
+     <h4><b>iii) For</b></h4>
+      <p>It is the most common and widely used loop in Java. It is the easiest way to construct a loop statement in code as initialization of a variable, a condition and increment/ decrement are declared only in a single line of code. It is easy to debug structure in Java. <br>
+      <b>Syntax:</b> <br>
+        for(initialization; condition;incr/decr) <br>
+      { <br>
+      //Block of code <br>
+      }
+    </p>
+      <h4><b>#For-each Loop</b></h4>
+      <p>It is used to traverse through element in an array. It is easier to use because we don't have to increment the value. It returns the elements from the array or collection one by one. <br>
+        <b>Syntax:</b><br>
+        for(type var: array) <br>
+        { <br>
+        Statements using var; <br>
+        } <br>
+        Is equivalent to: <br>
+        for(int i=0 ; i < arr.length; i++) <br>
+        { <br>
+        type var = arr[i]; <br>
+        statements using var; <br>
+        } <br>
+        #Limitaitons <br>
+        1) They are not appropriate when we want to modify the array. <br>
+        2) It do not keep track of index. So we cannot obtain array index. <br>
+        3) It only iterates forward over the array in single steps. <br>
+        4) It cannot process two decision making statements at once.
+      </p>
+
+     <h3>13) Jumping statements: break, continue and return </h3>
+        <p>Jumping statements jump from one statement to another and transfer the execution flow. There are 3 branching statements in Java. </p>
+      <h4><b>i) Break Statement</b></h4>
+       <p>It is used to terminate the execution and bypass the remaining code in the loop. It is mostly used in loop to stop the execution and comes out of the loop. When there are nested loops then break will terminate the innermost loop. <br>
+      Example: <br>
+      class BreakTest{ <br>
+        public static void main(String[] args){ <br>
+          for(int i=0;i<5;i++){ <br>
+            //comes out of loop when i=3 <br>
+            break; <br>
+            System.out.println(i); <br>
+      }<br> 
+      } <br>
+      } <br>
+
+    <strong>Output: </strong> <br>
+      0 <br>
+      1 <br>
+      2 <br>
+      3 <br>
+    </p>
+      <h4><b>ii) Continue Statement</b></h4>
+        <p>It works as break but the difference is it only comes out of the loop for that iteration and continue to execute the code for next iterations. So, it only bypasses the current location. <br>
+      Example:<br>
+      class ContinueTest{<br>
+        public static void main(String[] args){<br>
+          for(int i=0;i<10;i++)<br>
+      {<br>
+            if(i%2!=0)<br>
+      //if the number is odd then bypass and continue with next value.<br>
+      Continue;<br>
+      System.out.print(i + " ");<br>
+      //only even numbers printed<br>
+      }<br>
+      }<br>
+      }<br>
+      <strong>Output</strong> <br>
+      0 2 4 6 8
+    </p>
+      <h4><b>iii) Return Statement</b></h4>
+        <p>It is used to transfer the control back to calling method. Compiler will always bypass any statements after return statement. So, it must be at the end of any method. They can also return a value to the calling method.
+        </p>
       </div>
     </div> <!--Unit 2 ended-->
     <hr>
@@ -461,11 +986,11 @@
     <!--Refrences-->
     <div class="sources">
       <h4>Reference</h4>
-      <h5>Content used in this page are taken from different online tutorial websites like (w3school, tutorialspoint, Javapoint,geeksforgeeks etc).</h5>
+      <h5>Content used in this page are taken from different online tutorial websites like (w3school, tutorialspoint, Javapoint, geeksforgeeks etc).</h5>
       <p>For detail understanding on specific topic you can visit:
         <a href="https://www.geeksforgeeks.org/java/" target="_blank">geeksforgeeks,</a>
         <a href="https://www.javatpoint.com/java-tutorial" target="_blank">javaPoint,</a>
-        <a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">tutorialspoint</a>
+        <a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">tutorialspoint,</a>
         <a href="https://www.w3schools.com/java/default.asp" target="_blank">W3School</a>
       </p>
     </div> 
