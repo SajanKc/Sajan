@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN036. Write a class which demonstrates the use of public, private, and protected access specifier.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To demonstrates the use of public, private and protected access specifier.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    In Java, the term access modifiers refers to the keywords which are used to control accessibility to classess, interfaces, fields, constructors and methods. That means we can determine what can access our code.
+    <br>
+    In java, we have four types of access modifiers. <br>
+    i) default ii) private iii) protected iv) public <br>
+    <dl >
+      <dt>i. default</dt>
+      <dd>When we do not mention any access modifier, it is called default access modifier. The scope of this modifier is limited to the package only. It we have a default class, method or data member in a class, it would not be visible in the class of another package.</dd>
+
+      <dt>ii. private</dt>
+      <dd>The scope of private modifier is limited to the class only. Private data members and methods are only accessible with in class. Class and interface cannot be declared as private. If a class has private constructor then we cannot create the object of that class from outside of the class.</dd>
+
+      <dt>iii. protected</dt>
+      <dd>Protected data member and methods are only accessible by the classes of the same package and the subclasses present in any package. We can also say that the protected access modifider is similar to default access modifier with one exception that it has visibility in sub classes. <br>Classes cannot be declared as protected. This access modifier is generally used in a parent child relationship.</dd>
+
+      <dt>iv. public</dt>
+      <dd>The members, methods and classes that are declared public can be access from anywhere. This modifier doesn't put any restriction on the access.</dd>
+    </dl>
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      //3.1 default access modifier <br>
+      //Addition.java <br> <br>
+      package myPackage; <br>
+      public class Addition{ <br>
+        int addTwoNumbers(int x, int y){ <br>
+          return x+y; <br>
+        }<br> 
+      } <br> <br>
+
+      //TestDefault.java <br> <br>
+      package hisPackage; <br>
+      import myPackage.*; <br>
+      public class TestDefault { <br>
+        public static void main(String[] args){ <br>
+          Addition addObj = new Addition(); <br>
+          addObj.addTwoNumbers(20,30); <br>
+        } <br>
+      } <br> <br>
+
+      //3.2 private access modifier <br>
+      //privateABC.java <br> <br>
+      class privateABC{ <br>
+        private int num = 100; <br>
+        private int square(int a){<br>
+          return a*a;<br>
+        }<br>
+      }<br><br>
+
+      //TestPrivate.java <br> <br>
+      public class TestPrivate{ <br>
+        public static void main(String[] args){ <br>
+          privateABC obj = new privateABT(); <br>
+          System.out.println(obj.num); <br>
+          System.out.println(obj.square(10)); <br>
+        }  <br>
+      } <br> <br>
+
+      //3.3 protected access modifier <br>
+      //Addition.java <br> <br>
+      package myPackage; <br>
+      public class Addition{ <br>
+        protected int addTwoNumbers(int a, int b){
+          return a+b; <br>
+        }<br>
+      }<br><br>
+
+      //TestProtected.java <br> <br>
+      package hisPackage; <br>
+      import myPackage.*; <br>
+      class TestProtected extends Addition{ <br>
+        public static void main(String[] args){<br>
+          TestProtected obj = new TestProtected();<br>
+          System.out.println(obj.addTwoNumber(12,15));<br>
+        }<br>
+      }<br><br>
+
+      //3.4 public access modifier <br>
+      //Addition.java <br> <br>
+      package abcPackage;<br>
+      public class Addition {<br>
+        public int addTwoNumbers(int a, int b){<br>
+          return a+b;<br>
+        }<br>
+      }<br><br>
+
+      //Test.java <br> <br>
+      package xyzPackage; <br>
+      import abcPackage; <br>
+      class Test{ <br>
+        public static void main(String[] args){<br>
+          Addition obj = new Addition();  <br>
+          System.out.println(obj.addTwoNumbers(10,20))<br>
+        } <br>
+      }<br>
+
+    </code>
+    <h5>4. Output</h5>
+    <p>
+    Output: 3.1 default access modifier <br>
+    Exception in thread "main" java.lang.Error: unresolved compilation problem: The method addTwoNumbers(int,int) from the type Addition is not visible at hisPackage. TestDefault.main(TestDefault.java:7) <br>
+    <br>
+    Output: 3.2 private access modifier <br>
+    compile-time error <br>
+    <br>
+    Output: 3.3 protected access modifier <br>
+    27 <br>
+    <br>
+    Output 3.4 public access modifier <br>
+    30
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+     In this way, I would like to conclude that, we can use different kind of access modifier according to our requirements 
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

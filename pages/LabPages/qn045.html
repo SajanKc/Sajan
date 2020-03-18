@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN045. Write a program to update all record of database table.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To update all record of database table using java program.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    In this program, we create statement and execute mysql query to update all record of database table.
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      import java.sql.*; <br>
+      <br>
+      class JDBC45{<br>
+        public static void main(String[] args){<br>
+          try{<br>
+            Class.forName("com.mysql.cj.jdbc.Driver");<br>
+            String url = "jdbc:mysql://localhost:3306/bca_third_2020?serverTimezone=UTC";<br>
+            String un = "root";<br>
+            String pw = "";<br>
+            Connection cn = DriverManager.getConnection(url,un,pw);<br>
+            updateAll(cn);<br>
+          }catch(Exception e){<br>
+            System.out.println(e);<br>
+          }<br>
+        }<br>
+        <br>
+        private static void updateAll(Connection cn) throws SQLException {<br>
+          Statement stat = cn.createStatement(); // statment create<br>
+          <br>
+          String query = "update student set course = 'BCA'";<br>
+          stat.executeUpdate(query); // execute query<br>
+          <br>
+          System.out.println("Record updated!");<br>
+          }<br>
+        }<br>
+    </code>
+    <h5>4. Output</h5>
+    <p>
+    Record updated! 
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+    In this way, I would like to conclude that by executing mysql query we can update all column at once by using this program.  
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

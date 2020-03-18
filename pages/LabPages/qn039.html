@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN039. Write a suitable class with using this, and super keyword.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To create a class with using this and super keyword.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    <dl>
+      <dt>i. this</dt>
+      <dd>There can be a lot f usages of java this keyword. In Java, this is a reference variable that refers to the current object.</dd>
+
+      <dt>ii. super</dt>
+      <dd>The super keyword in Java is a reference variable which is used to refer immediate parent class object. Whenever we create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.</dd>
+    </dl>
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      //1. Program using this keyword <br>
+      class Bike{<br>
+        int bikeNo;<br>
+          String bikeName;<br>
+          float bikePrice;<br>
+         Bike(int bikeNo,String bikeName, float bikePrice){<br>
+              this.bikeNo = bikeNo;<br>
+              this.bikeName = bikeName;<br>
+              this.bikePrice = bikePrice;<br>
+          }<br>
+          void display()<br>
+          {<br>
+              System.out.println(bikeNo + " " + bikeName + " Rs." + bikePrice);<br>
+          }<br>
+        }<br>
+        <br>
+        public class Qn039 {<br>
+          public static void main(String[] args){<br>
+              Bike b = new Bike(4262, "FZS", 260000f);<br>
+              b.display();<br>
+          }<br>
+        }<br>
+      <br>
+      <br>
+        //2. Program using super keyword<br>
+        class Animal{<br>
+            String color= "red";<br>
+        }<br>
+        <br>
+        class Rabbit extends Animal{<br>
+          String color = "White";<br>
+          void printColor(){<br>
+              System.out.println("Rabbit color: " + color); // prints color of Rabbit<br>
+              System.out.println("Animal color: " + super.color); //prints color of animal<br>
+          }<br>
+        }<br>
+        <br>
+        public class Qn039{<br>
+          public static void main(String[] args){<br>
+              Rabbit r = new Rabbit();<br>
+              r.printColor();<br>
+          }<br>
+        }<br>
+    </code>
+    <h5>4. Output</h5>
+    <p>
+      Output: this keyword <br>
+      4262 FZS Rs.260000.0 <br>
+      <br>
+      Output: super keyword <br>
+      Rabbit color: white <br>
+      Animal color: red
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+    In this way, I would like to conclude that, we can use this keyword to refer the current object and super keyword to refer immediate parent class object.  
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

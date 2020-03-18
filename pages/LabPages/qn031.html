@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN031. Write a program to delete a number from array.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To delete a number from array.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    In this program we use for loop to travel through all the element of array and apply if statement to check for the element and shift the array element using another loop. 
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      import java.util.Scanner; <br>
+      public class Qn031 {<br>
+          public static void main(String[] args) {<br>
+              Scanner input = new Scanner(System.in);<br>
+              int[] arrVar = {1, 2, 5, 12, 7, 3, 8};<br><br>
+          
+          System.out.println("Available Array:\n");<br>
+              for(int i = 0; i < arrVar.length; i++){<br>
+                  System.out.print(arrVar[i]+" ");<br>
+              }<br>
+              System.out.print("\nEnter Element to be deleted : ");<br>
+              int element = input.nextInt();<br>
+              <br>
+              for(int i = 0; i < arrVar.length; i++){<br>
+                  if(arrVar[i] == element){<br>
+                      // shifting elements<br>
+                      for(int j = i; j < arrVar.length - 1; j++){<br>
+                          arrVar[j] = arrVar[j+1];<br>
+                      }<br>
+                      break;<br>
+                  }<br>
+              }<br>
+            <br>
+              System.out.println("\nAfter removing element " + element + "\n");<br>
+              for(int i = 0; i < arrVar.length-1; i++){<br>
+                  System.out.print(arrVar[i]+" ");<br>
+              }                <br>
+          }<br>
+      }
+    </code>
+    <h5>4. Output</h5>
+    <p>
+    Available Array: <br>
+    1 2 5 12 7 3 8 <br>
+    Enter Element to be deleted: 7 <br>
+    <br>
+    After removing element 7 <br>
+    1 2 5 12 3 8
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+    In this way, I would like to conclude that, We can delete any number from the array using this program. 
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

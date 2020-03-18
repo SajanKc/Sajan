@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN042. Write a program which connects with mysql database.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To write a program which connects with mysql database.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    JDBC stands for Java Databse  Connectivity. JDBC is a java API to connect and execute the query with the database. It is a part of JAVASE (Java Standard Edition). JDBC API uses JDBC drivers to connect with the database. There are four types of JDBC drivers. They are: <br>
+    i. JDBC-ODBC Bridge Driver, <br> ii. Native Driver, <br> iii. Network Protocal Driver and <br> iv. Thin Driver <br> <br>
+
+    There are 5 steps to connect any java application with the databse using JDBC. There steps are as follows. <br>
+    <ol>
+      <li>Register the Driver Class</li>
+      <li>Create Connection</li>
+      <li>Create Statement</li>
+      <li>Execute queries</li>
+      <li>Close Connection</li>
+    </ol>        
+    
+    <dl>
+      <dt>1. Register the Driver Class</dt>
+      <dd>
+        The forName() method of Class class is used to register the driver class. This method is used to dynamically load the driver class. <br>
+        Syntax: <br>
+        public static void forName(String className) throws classNotFoundException
+      </dd>
+
+      <dt>2. Create Connection</dt>
+      <dd>
+        The getConnection() method of DriverManager class is used to establish connection with the database. <br>
+        Syntax: <br>
+        puclic static Connection getConnection(String url, String name, String password) throws SQLException <br>
+        For example: <br>
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bca_third?","root","");
+      </dd>
+
+      <dt>3. Create Statement</dt>
+      <dd>
+        The createStatement() method of Connection interface is used to create statement. The object of statement is responsible to execute queries with the database. <br>
+        Syntax: <br>
+        public Statement createStatement() throws SQLException <br>
+        For example: <br>
+        Statement stmt = con.createStatement();
+      </dd>
+
+      <dt>4. Execute queries</dt>
+      <dd>
+        The executeQuery() method of staement interface is used to execute queries to the database. This method returns the object of ResultSet that can be used to get alll the records of a table. <br>
+        Syntax: <br>
+        public ResultSet executeQuery(String sql) throws SQLException <br>
+        For example: <br>
+        ResultSet rs = stmt.executeQuery("SELECT * FROM student"); <br>
+        while(rs.next()){ <br>
+          System.out.println(rs.getString("roll_no")); <br>
+        }
+      </dd>
+
+      <dt>5. Close Connection</dt>
+      <dd>
+        By closing connection object statement and ResultSet will be closed automatically. The close() method of Connection interface is used to close the connection. <br>
+        Syntax: <br>
+        public void close() throws SQLException <br>
+        For example: <br>
+        con.close();
+      </dd>
+    </dl>
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      import java.sql.*; <br>
+      class JDBC42{ <br>
+      &nbsp;&nbsp;public static void main(String[] args){<br>
+      &nbsp;&nbsp;&nbsp;try{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Class.forName("com.mysql.cj.jdbc.Driver");<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;String url = "jdbc:mysql://localhost:3306/bca_third_2020?serverTimezone=UTC";<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;String un = "root";<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;String pw = "";<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Connection cn = DriverManager.getConnection(url,un,pw);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Connected!");<br>
+      &nbsp;&nbsp;&nbsp;}catch(Exception e){<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(e);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;}<br>
+      &nbsp;}
+    </code>
+    <h5>4. Output</h5>
+    <p>
+    Connected! 
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+    In this way, I would like to conclude that, we can connect to mysql database using this program.
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

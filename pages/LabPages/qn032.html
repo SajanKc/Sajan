@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN032. Write a program to add new number in array.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To add new number in array.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    In this program we create a method to add number in the array. This method is able to read all the data of old array and copy to new array and the new number is added in the last index. 
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      import java.util.*; <br> 
+      public class Qn032{ <br>
+        // Function to add new item in arr <br>
+        public static int[] addX(int n, int arr[], int x) <br>
+        { <br>
+          int i;<br>
+          // create a new array of size n+1 <br>
+          int newarr[] = new int[n + 1]; <br>
+          for (i = 0; i < n; i++) <br>
+            newarr[i] = arr[i]; <br>
+            <br>
+          newarr[n] = x; <br>
+          return newarr; <br>
+        } <br> <br>
+        public static void main(String[] args) <br>
+        { <br>
+          int n = 10; <br>
+          int i; <br>
+          Scanner input = new Scanner(System.in);<br>
+          int arr[] ={ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; <br>
+          System.out.println("\nInitial Array:\n" + Arrays.toString(arr)); <br>
+          System.out.print("\nEnter the new element for array: ");<br>
+          int x = input.nextInt();<br>
+          arr = addX(n, arr, x); <br>
+          System.out.println("\nArray with " + x + " added:\n" + Arrays.toString(arr)); <br>
+        } <br>
+      } <br>
+
+    </code>
+    <h5>4. Output</h5>
+    <p>
+    Initial Array: <br>
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>
+    Enter the new element for array: 15 <br> <br>
+    Array with 15 added: <br>
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15]
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+    In this way, I would like to conclude that by using this program we can add new number in the array. 
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

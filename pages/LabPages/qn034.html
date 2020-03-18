@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN034. Write a class to accept and print book information using default constructor.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To create a class to accept and print book information using default constructor.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling constructor, memory for the object is allocated in the memory. <br>
+    It is a special type of method which is used to initialize the object. <br>
+    Every time an object is created using the <b>new</b> keyword, at least one constructor is called. <br>
+    It calls a default constructor if there is no constructor available in the class. In such case, Java compiler provides a default constructor by default.
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      import java.util.Scanner; <br>
+      public class Qn034{ <br>
+          Scanner input = new Scanner(System.in);<br>
+          String bookName, authorName;<br>
+          int bookPrice, numberOfPages;<br>
+          <br>
+          Qn034(){<br>
+            System.out.print("Enter book name: ");<br>
+            bookName = input.nextLine();<br>
+            <br>
+            System.out.print("Enter author name: ");<br>
+            authorName = input.nextLine();<br>
+            <br>
+            System.out.print("Enter book price: ");<br>
+            bookPrice = input.nextInt();<br>
+            <br>
+            System.out.print("Enter total number of pages in book: ");<br>
+            numberOfPages = input.nextInt();<br>
+            <br>
+            System.out.println("\nBook information");<br>
+            System.out.println("Book Name: " + bookName);<br>
+            System.out.println("Author: " + authorName);<br>
+            System.out.println("Price: " + bookPrice);<br>
+            System.out.println("Total no. of pages: " + numberOfPages);<br>
+          }<br>
+          public static void main(String[] args){<br>
+            Qn034 qnObj = new Qn034();<br>
+        }<br>
+      }<br>
+    </code>
+    <h5>4. Output</h5>
+    <p>
+    Enter book name: Java <br>
+    Enter author name: Paul Deitel <br>
+    Enter book price: 1500 <br>
+    Enter totol number of pages in book: 500 <br> <br>
+    Book Information <br>
+    Book Name: Java <br>
+    Author: Paul Deitel <br>
+    Price: Rs 1500 <br>
+    Total no. of pages: 500
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+    In this way, I would like to conclude that by creating default constructor we can accept and display the book information.
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

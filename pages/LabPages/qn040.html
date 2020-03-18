@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>Java Lab Work</title>
+  <link rel="icon" href="../../Img/logo.png" type="image/ico">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower&display=swap" rel="stylesheet">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../css/pagescss.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../../index.html"><img src="./img/logo.png" class="mx-auto d-block" width="auto" height="40" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../ProgrammingLanguage.html">Java</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../javaLabWork.html">Java Lab Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="mainContent">
+    <h4>QN040. Write a program which demonstrates the use of try, catch and finally statement with suitable example.</h4>
+    <hr>
+    <h5>1. Objective</h5>
+    <p>
+      To create a program which demonstrates the use of try, catch and finally statement.
+    </p>  
+    <h5>2. Theory</h5>
+    <p>
+    <dl>
+      <dt>i. try</dt>
+      <dd>The try keyword is used to specify a block where we should place exception code. The try block must be followed by either catch or finally. It means we can't use try block alone.</dd>
+
+      <dt>ii. catch</dt>
+      <dd>The catch block is used to handle the exceptio. It must be preceded by try block which means we can't use catch block alone. It can be followed by finally block later.</dd>
+
+      <dt>iii. finally</dt>
+      <dd>The finnaly block is used to execute the important code of the program. It is executed whether an exception is handled or not.</dd>
+    </dl> 
+    </p>
+    <h5>3. Source Code</h5>
+    <code>
+      public class Qn040{  <br>
+      public static void main(String args[]){  <br>
+      try{  <br>
+       int data=25/0;  <br>
+       System.out.println(data);  <br>
+      }  <br>
+      catch(ArithmeticException e){System.out.println(e);}  <br>
+      finally{System.out.println("I am finally block I will always execute");}  <br>
+      System.out.println("rest of the code...");  <br>
+      }  <br>
+    } <br>
+    </code>
+    <h5>4. Output</h5>
+    <p>
+    java.lang.ArithmeticException: /by zero <br>
+    I am finnaly block I will always execute. <br>
+    I am also executing 
+    </p>
+    <h5>5. Conclusion</h5>
+    <p>
+    In this way, I would like to conclude that, we can use try, catch and finally statement to handle the different exception.
+    </p>
+  </div>
+  </body>
+ <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>
