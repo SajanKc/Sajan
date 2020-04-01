@@ -59,26 +59,24 @@
     </p>
     <h5>3. Source Code</h5>
     <code>
-        import java.util.Scanner; <br>
-        public class Qn030{<br>
-          public static void main(String[] args){<br>
-            int count=0, n;<br>
-            Scanner input = new Scanner(System.in);<br>
-            System.out.print("Enter a number to search: ");<br>
-            n = input.nextInt();<br>
-            int arrayVar[] = {2, 6, 17, 9, 15};<br>
-                for(int i = 0; i<5; i++)<br>
-                {<br>
-              count++;<br>
-              if(n == arrayVar[i])<br>
-              { <br>
-                System.out.println(n + " is in index " + count);<br>
-                System.exit(0);<br>
-              }<br>
-            }<br>
-            System.out.println(n + " is not found in array.");<br>
-          }<br>
-        }<br>
+      import java.util.Scanner; <br>
+      public class Main{ <br>
+        public static void main(String[] args){ <br>
+          int count=0, n; <br>
+          Scanner input = new Scanner(System.in); <br>
+          System.out.print("Enter a number to search: "); <br>
+          n = input.nextInt(); <br>
+          int arrayVar[] = {2, 6, 17, 9, 15, 9, 4, 7, 9, 2, 9}; <br>
+              for(int i = 0; i < arrayVar.length; i++){ <br>
+              if(n == arrayVar[i]) <br>
+                count++; <br>
+              } <br>
+          if(count!=0) <br>
+            System.out.println(n + " is in array and repeated " + count + " times."); <br>
+          else <br>
+            System.out.println(n + " is not in array."); <br>
+        } <br>
+      } <br>
     </code>
     <h5>4. Output</h5>
     <p>
